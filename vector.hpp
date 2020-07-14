@@ -203,6 +203,8 @@ namespace lni {
 		for (i = 0; i < other.vec_sz; ++i)
 			arr[i] = std::move(other.arr[i]);
 		vec_sz = other.vec_sz;
+
+		return *this;
 	}
 
 	template <typename T>
@@ -214,6 +216,8 @@ namespace lni {
 		vec_sz = 0;
 		for (auto &item: lst)
 			arr[vec_sz++] = item;
+
+		return *this;
 	}
 
 	template <typename T>
