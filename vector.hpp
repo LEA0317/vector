@@ -189,6 +189,8 @@ namespace lni {
 		for (i = 0; i < other.vec_sz; ++i)
 			arr[i] = other.arr[i];
 		vec_sz = other.vec_sz;
+
+		return *this;
 	}
 
 	template <typename T>
